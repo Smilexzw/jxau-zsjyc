@@ -1,0 +1,212 @@
+<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="Bookmark" href="/ico/favicon.ico" >
+<link rel="Shortcut Icon" href="/ico/favicon.ico" />
+	<link rel="icon" href="/ico/favicon.ico" type="image/x-icon" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<!--/meta 作为公共模版分离出去-->
+
+<title>新增文章</title>
+</head>
+<body>
+<article class="page-container">
+	<form class="form form-horizontal" id="form-article-add" action="article-add" method="post" enctype="multipart/form-data">
+	<input style="display:none" type="text" name="id" th:value="${articles.id}">
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>链接标题：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" placeholder="" id="articletitle" name="title">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>分类栏目：</label>
+			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
+				<select name="classid" class="select" id="status">
+					<option value="">请选择</option>
+					<option  th:each="classType:${classTypes}" th:value="|${classType.id}|" th:text="|${classType.classname}|">新闻资讯</option>
+				</select>
+				</span> </div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">时间：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="date" class="input-text" placeholder="" id="mydate" name="mydate">
+			</div>
+		</div>
+		<div class="row cl" style="display: none;">
+			<label class="form-label col-xs-4 col-sm-2">排序值：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" placeholder="" id="articlesort" name="index">
+			</div>
+		</div>
+		<div class="row cl" >
+			<label class="form-label col-xs-4 col-sm-2">使用外链：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="checkbox" id="allowcomments" name="allowcomments" value="1" onclick="checkboxOnclick(this)">
+					<label for="checkbox-pinglun">&nbsp;</label>
+				</div>
+			</div>
+		</div>
+		<div class="row cl" id="wailian" style="display: none;">
+			<label class="form-label col-xs-4 col-sm-2">外链链接：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="http://" placeholder="" id="sources" name="comefrom">
+			</div>
+		</div>
+		<div class="row cl" id="tupianshangchuan" style="display: none;">
+			<label class="form-label col-xs-4 col-sm-2">轮播图片：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<div class="uploader-thum-container">
+					<div id="fileList" class="uploader-list"></div>
+						<input type="file" name="file" />
+				</div>
+			</div>
+		</div>
+		<div class="row cl" id="wenzhangneirong">
+			<label class="form-label col-xs-4 col-sm-2">文章内容：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+				<script id="editor" type="text/plain" style="width:1040px;height:400px;"></script>
+			</div>
+		</div>
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+				<button class="btn btn-primary radius" type="submit" value="submit"><i class="Hui-iconfont">&#xe632;</i> 提交</button>
+			</div>
+		</div>
+	</form>
+</article>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer /作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="lib/webuploader/0.1.5/webuploader.min.js"></script> 
+<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.config.js"></script> 
+<script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js"> </script> 
+<script type="text/javascript" src="lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("select#status").change(function(){
+		if($(this).val()=="6"){
+			$("#tupianshangchuan").show();
+		}else{
+			$("#tupianshangchuan").hide();
+		}
+	});
+	$('#allowcomments').iCheck({
+		checkboxClass: 'icheckbox-blue',
+		radioClass: 'iradio-blue',
+		increaseArea: '20%'
+		
+	});
+	$('#allowcomments').on('ifChecked', function(event){ 
+		$("#wailian").show();
+		$("#wenzhangneirong").hide();
+	}); 
+	$('#allowcomments').on('ifUnchecked', function(event){ 
+		$("#wailian").hide();
+		$("#wenzhangneirong").show();
+	}); 
+	//表单验证
+	$("#form-article-add").validate({
+		rules:{
+			title:{
+				required:true,
+			},
+			classid:{
+				required:true,
+			},
+			index:{
+				required:true,
+			},
+			mydate:{
+				required:true,
+			},
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		
+		submitHandler:function(form){
+			$(form).ajaxSubmit({
+            success: function(data) { // data 保存提交后返回的数据，一般为 json 数据
+                // 此处可对 data 作相关处理
+				alert('提交成功！');
+				var index = parent.layer.getFrameIndex(window.name);
+				//parent.$('.btn-refresh').click();
+				parent.layer.close(index);
+            },
+			error : function(xhr,status,err) {
+                alert('提交失败！');				
+			}
+			});	
+		}
+	});
+	
+	var ue = UE.getEditor('editor');
+	ue.ready(function() {
+        //默认显示内容
+		var articlesclassid="[[${classid}]]";
+		$("#status").val(articlesclassid);
+		if(articlesclassid=="6"){
+			$("#tupianshangchuan").show();
+		}
+		$.ajax({
+        url:"getArticlebody?id="+"[[${articles.id}]]",
+        type:"Post",
+        contentType:"application/json;charset=utf-8",
+        dataType:"json",
+        success:function(data){
+			$("#articletitle").attr("value",data.title);
+			$("#mydate").attr("value",data.mydate);			
+			if(data.classid!="0"){
+				$("#status").val(data.classid);
+			}
+			$("#articlesort").attr("value",data.index);
+			if(data.classid=="6"){
+				$("#tupianshangchuan").show();
+				if(data.img!=""){
+					$("#fileList").append("<img src='"+data.img+"' />");
+				}
+			}
+			if(data.comefrom!="本站"&&data.comefrom!=""){
+				$('#allowcomments').iCheck('check');
+				$("#sources").attr("value",data.comefrom);
+			}
+            var content = data.article;
+			ue.setContent(content);
+        }
+    });
+    });
+});
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

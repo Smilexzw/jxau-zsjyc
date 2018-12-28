@@ -1,0 +1,52 @@
+2018-12-28 16:04:13.020  INFO 9912 --- [main] cn.jxau.zsjyc.App                        : Starting App on DESKTOP-08KQ7VO with PID 9912 (D:\project\jxau-zsjyc\target\classes started by SMILEXZW in D:\project\jxau-zsjyc)
+2018-12-28 16:04:13.023  INFO 9912 --- [main] cn.jxau.zsjyc.App                        : No active profile set, falling back to default profiles: default
+2018-12-28 16:04:13.388  INFO 9912 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a69b07: startup date [Fri Dec 28 16:04:13 CST 2018]; root of context hierarchy
+2018-12-28 16:04:14.704  INFO 9912 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2018-12-28 16:04:14.726  INFO 9912 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2018-12-28 16:04:14.760  WARN 9912 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2018-12-28 16:04:14.760  WARN 9912 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2018-12-28 16:04:14.781  INFO 9912 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2018-12-28 16:04:14.781  INFO 9912 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1408 ms
+2018-12-28 16:04:14.883  INFO 9912 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-12-28 16:04:14.887  INFO 9912 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-28 16:04:14.888  INFO 9912 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-28 16:04:14.888  INFO 9912 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-12-28 16:04:14.888  INFO 9912 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-28 16:04:15.824  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7a69b07: startup date [Fri Dec 28 16:04:13 CST 2018]; root of context hierarchy
+2018-12-28 16:04:15.876  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public java.lang.String cn.jxau.zsjyc.controller.AdminController.checklogin(javax.servlet.http.HttpServletRequest,cn.jxau.zsjyc.pojo.Admin,javax.servlet.http.HttpSession,org.springframework.ui.Model)
+2018-12-28 16:04:15.876  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/adminindex],methods=[GET]}" onto public java.lang.String cn.jxau.zsjyc.controller.AdminController.adminindex(org.springframework.ui.Model)
+2018-12-28 16:04:15.877  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/keepsession]}" onto public java.lang.String cn.jxau.zsjyc.controller.AdminController.keepsession()
+2018-12-28 16:04:15.877  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/password_modify],methods=[POST]}" onto public java.lang.String cn.jxau.zsjyc.controller.AdminController.passwordModify(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2018-12-28 16:04:15.877  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String cn.jxau.zsjyc.controller.AdminController.login()
+2018-12-28 16:04:15.877  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout]}" onto public java.lang.String cn.jxau.zsjyc.controller.AdminController.logout(javax.servlet.http.HttpSession)
+2018-12-28 16:04:15.877  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addAdmin]}" onto public java.lang.String cn.jxau.zsjyc.controller.AdminController.addAdmin(cn.jxau.zsjyc.pojo.Admin)
+2018-12-28 16:04:15.878  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin-password-edit],methods=[GET]}" onto public java.lang.String cn.jxau.zsjyc.controller.AdminController.adminPasswordEdit()
+2018-12-28 16:04:15.879  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/article-add],methods=[GET]}" onto public java.lang.String cn.jxau.zsjyc.controller.ArticlesAddController.getArticles(cn.jxau.zsjyc.pojo.Articles,org.springframework.ui.Model)
+2018-12-28 16:04:15.879  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/article-add],methods=[POST]}" onto public java.lang.String cn.jxau.zsjyc.controller.ArticlesAddController.postArticles(org.springframework.web.multipart.MultipartFile,cn.jxau.zsjyc.pojo.Articles,java.lang.String,java.lang.String,int[],org.springframework.ui.Model)
+2018-12-28 16:04:15.879  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getArticlebody],methods=[POST]}" onto public java.lang.String cn.jxau.zsjyc.controller.ArticlesAddController.getArticlebody(cn.jxau.zsjyc.pojo.Articles)
+2018-12-28 16:04:15.879  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addDraft],methods=[POST]}" onto public java.lang.String cn.jxau.zsjyc.controller.ArticlesAddController.addDraft(cn.jxau.zsjyc.pojo.Articles)
+2018-12-28 16:04:15.881  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/article_start],methods=[POST]}" onto public java.lang.String cn.jxau.zsjyc.controller.ArticlesListController.articlestart(java.lang.String)
+2018-12-28 16:04:15.881  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/deleteArticles],methods=[POST]}" onto public java.lang.String cn.jxau.zsjyc.controller.ArticlesListController.deleteArticles(int)
+2018-12-28 16:04:15.882  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/article-list],methods=[GET]}" onto public java.lang.String cn.jxau.zsjyc.controller.ArticlesListController.articleList(org.springframework.ui.Model)
+2018-12-28 16:04:15.882  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.lang.String cn.jxau.zsjyc.controller.BaseErrorController.error()
+2018-12-28 16:04:15.883  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String cn.jxau.zsjyc.controller.MainController.index(org.springframework.ui.Model)
+2018-12-28 16:04:15.883  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{page}],methods=[GET]}" onto public java.lang.String cn.jxau.zsjyc.controller.MainController.showPage(java.lang.String)
+2018-12-28 16:04:15.884  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/more],methods=[GET]}" onto public java.lang.String cn.jxau.zsjyc.controller.MoreController.more(java.lang.Integer,org.springframework.ui.Model)
+2018-12-28 16:04:15.885  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/lib/ueditor/1.4.3/config]}" onto public void cn.jxau.zsjyc.controller.UeditorController.config(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-12-28 16:04:15.885  INFO 9912 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/view],methods=[GET]}" onto public java.lang.String cn.jxau.zsjyc.controller.ViewController.view(org.springframework.ui.Model,cn.jxau.zsjyc.pojo.Articles)
+2018-12-28 16:04:15.909  INFO 9912 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-28 16:04:15.910  INFO 9912 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-28 16:04:15.928  INFO 9912 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in globalExceptionHandler
+2018-12-28 16:04:15.948  INFO 9912 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-12-28 16:04:15.978  WARN 9912 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-12-28 16:04:16.567  INFO 9912 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-12-28 16:04:16.570  INFO 9912 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-12-28 16:04:16.576  INFO 9912 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2018-12-28 16:04:16.638  INFO 9912 --- [main] b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 80 (http)
+2018-12-28 16:04:16.643  INFO 9912 --- [main] cn.jxau.zsjyc.App                        : Started App in 4.189 seconds (JVM running for 6.597)
+2018-12-28 16:04:31.875  INFO 9912 --- [XNIO-2 task-1] io.undertow.servlet                      : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-12-28 16:04:31.875  INFO 9912 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-12-28 16:04:31.887  INFO 9912 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2018-12-28 16:04:32.122  INFO 9912 --- [XNIO-2 task-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-12-28 16:04:52.994  INFO 9912 --- [XNIO-2 task-8] c.jxau.zsjyc.controller.AdminController  : ip:0:0:0:0:0:0:0:1	1	TVd3dWN6RXlNdz09DQo=
+

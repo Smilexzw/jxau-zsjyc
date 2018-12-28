@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.jxau.zsjyc.mapper.ArticlesMapper">
+	
+	<select id="selectArticlesAll" resultType="Articles" >
+		SELECT `index`,id,title,classid,comefrom,date,viewtimes,article,`status`,classname,img FROM `articles` order by date  desc
+	</select>
+
+	<select id="selectArticlesByClassid" resultType="Articles">
+		SELECT `index`,id,title,classid,comefrom,date,viewtimes,article,`status`,classname,img FROM `articles` where classid=#{value} order by date desc LIMIT 10
+	</select>
+
+	<select id="selectArticlesAllByClassid" resultType="Articles">
+		SELECT `index`,id,title,classid,comefrom,date,viewtimes,article,`status`,classname,img FROM `articles` where classid=#{value} order by date
+	</select>
+
+	<select id="selectArticlesById" resultType="Articles">
+		SELECT `index`,id,title,classid,comefrom,date,viewtimes,article,`status`,classname,img FROM `articles` where id=#{value}
+	</select>
+
+	<update id="addArticles1">
+		update article set `index`=`index`+1 where `index`>=#{index}
+	</update>
+	<insert id="addArticles">
+		insert into article(title,comefrom,date,article,status,classid,`index`,img) values(#{title},#{comefrom},#{date},#{article},#{status},#{classid},#{index},#{img})
+	</insert>
+
+	<update id="modifyArticles1">
+		update article as a ,(select `index` from article where id=#{id}) as b set a.`index`=a.`index`-1 where a.`index`>b.`index`;
+	</update>
+	<update id="modifyArticles2">
+		update article set `index`=`index`+1 where `index`>=#{index};
+	</update>
+	<update id="modifyArticles">
+		update article set `index`=#{index},title=#{title},comefrom=#{comefrom},`date`=#{date},article=#{article},status=#{status},classid=#{classid},img=#{img} where id=#{id}
+	</update>
+
+	<update id="deleteArticles1">
+		update article set `index`=`index`-1 where `index`>#{index}
+	</update>
+   <delete id="deleteArticles">
+        delete from article where id = #{id};
+   </delete>
+
+	<update id="addViewTime">
+		update article set `viewtimes`=`viewtimes`+1 where `id`=#{value }
+	</update>
+</mapper>

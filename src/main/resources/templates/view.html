@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta content="all" name="robots">
+<meta name="baidu-site-verification" content="dAw6rhMAIK" />
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+<link rel="stylesheet" href="css/amazeui.min.css" type="text/css" />
+<link rel="stylesheet" href="css/def.css" type="text/css" />
+	<link rel="icon" href="/ico/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/ico/favicon.ico" type="image/x-icon"/>
+<script src="js/jquery.min.js"></script>
+<title>江西农业大学招生就业处</title>
+
+</head>
+
+<body class="index-page"
+	style="display: flex; flex-direction: column; height: auto; min-height: 100%;">
+	<ul class="swipe-list">
+		<li class="swipe-item curr">
+			<div class="body-big-bg"
+				style="background-image:url(img/124.png);">
+				<div class="bg-shade"></div>
+			</div>
+		</li>
+	</ul>
+	<style>
+html {
+	min-width: 1200px;
+}
+</style>
+	<input type="hidden" id="token" value="yxqqnn1600000002">
+	<input type="hidden" id="qrcode_url" value="img/1541476205-7818.png">
+	<input type="hidden" id="qq_services" value="">
+	<div class="header">
+
+		<div class="inner clearfix" style="padding-top: 40px;padding-bottom: 40px;">
+			<div class="logo" id="logo">
+				<a href="javascript:;" class="logo-link" style="height: 100%;">
+					<img src="img/校徽.png" class="logoimg1"> 
+					<img src="img/校名-0.png" class="logoimg2">
+					<span class="logoimg3">JIANGXI&nbsp; &nbsp;AGRICULTURAL&nbsp;&nbsp;UNIVERSITY</span>
+				</a>
+				<p class="logoimg4" style="background-image: url(img/154512658960601.png);background-repeat:no-repeat;background-size:100% 100%;width:400px"></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="main-nav">
+		<div class="inner">
+			<!--导航-->
+			<ul class="nav-list clearfix" id="main_nav">
+				<li class="item"  th:each="article:${bk7}"><a th:href="|view?id=${article.id}|" class="item-link" th:text="${article.title}">首页</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<div class="container">
+	<div class="big-bg">
+			<div class="bg-shade"></div>
+		</div>
+		<div class="inner" style="background-color: white;min-height: 400px; border-left:1px solid #000; border-right:1px solid #000; padding-left:95px; padding-right:95px; padding-top:30px;">
+		
+		<div class="article">
+                
+                    <h1 style="font-size:24px;line-height:26px; padding-top:20px; padding-bottom:5px; text-align:center; color:#424242;" th:text="${articles.title}">
+                        农学院举办首届寝室文化艺术节系列活动
+                    </h1>
+                    <h1 style="line-height:24px; text-align:center; font-size:16px; font-weight: normal; color:#424242; border-bottom:2px solid #ECECEC">
+                        
+                    </h1>
+                    <p style=" height: 16px; line-height: 16px; text-align:center; padding: 10px 0; margin-bottom:30px">
+                        <span style="display: inline-block; margin:0 5px; font-size:12px; color:#787878;" th:text="|时间：${#dates.format(articles.date,'yyyy-MM-dd')}|">时间：2018-12-17</span>
+						<span style="display: inline-block; margin:0 5px; font-size:12px; color:#787878;">浏览量：
+						<span style="display: inline-block; margin:0 5px; font-size:12px; color:#787878;" th:text="${articles.viewtimes}">21</span></span>
+                    </p>
+                
+            </div>
+		
+	<div width="794px" th:utext=${articles.article}></div>
+	</div>
+	</div>
+	
+	<div class="footer">
+		<div class="inner">
+			<div class="foot-content">
+		  	  	<div class="fc-inner">
+				  <div class="foot-left">
+					<div class="foot-a">
+					  <div class="foot-a-leftroot">
+						<a class="foot-a-left" href="http://www.jxau.edu.cn/" target="_blank">江西农业大学</a>
+						<a class="foot-a-left" href="http://www.jxedu.gov.cn/" target="_blank">江西省教育厅</a>
+						<a class="foot-a-left" href="http://www.jxeea.cn/" target="_blank">江西省教育考试院</a>
+					  </div>
+					  <div class="foot-a-rightroot">
+						<a class="foot-a-right" href="http://www.moe.gov.cn/" target="_blank">中华人民共和国教育部</a>
+						<a class="foot-a-right" href="https://gaokao.chsi.com.cn/" target="_blank">教育部高校招生阳光平台</a>
+						<a class="foot-a-right" href="http://www.jxjob.net/" target="_blank">江西省高等院校毕业生就业生工作办公室</a>
+					  </div>
+					
+					</div>
+				  </div>
+				  <div class="foot-content2">
+						<p class="copyright" style="margin-top: 10px;">
+							<span class="text">邮编:330045</span>
+							<span class="text">地址: 江西省南昌市昌北经济开发区</span>
+							
+						</p>
+						
+						<p class="copyright" style="margin-top: 10px;">
+							<span class="text">电话:0791-83813214(招生)</span>
+							<span class="text">83813764、83828037(就业)</span>
+						</p>
+						<p class="copyright" style="margin-top: 10px;">
+							<span class="text">传真: 0791-8381214(招生)</span>
+							<span class="text">83813764(就业)</span>
+						</p>
+						<p class="copyright" style="margin-top: 10px;">
+							<span class="text">邮箱: jxndzsb@163.com(招生)</span>
+							<span class="text">jxndjy@126.com(就业)</span> 
+						</p>
+
+						<p class="copyright"  style="margin-top: 10px;margin-left:-25px;">
+							<span class="text">© 2018 江西农业大学招生与就业工作处</span>
+							<span class="text">技术支持：江西农业大学半月工作室</span>
+						</p>
+				  </div>
+				  
+				  <div class="foot-right" style="margin-top: 10px;">
+					<div class="foot-img">
+						 <img src="img/1.jpg" >
+						 就业微信平台
+					</div>
+					<div class="foot-img">
+						 <img src="img/2.jpg" >
+						 招生微信平台
+					</div>
+					
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/def.js"></script>
+
+
+</body></html>

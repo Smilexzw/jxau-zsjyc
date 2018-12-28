@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.jxau.zsjyc.mapper.ClassTypeMapper">
+	
+	<select id="selectClassTypeAll" resultType="ClassType">
+		SELECT id,classname FROM `classtype`
+	</select>
+
+	<insert id="addArticles">
+		insert into classtype(classname) values(#{classname})
+	</insert>
+	
+	<update id="modifyClassType">
+		update classtype set classname=#{classname} where id=#{id}
+	</update>
+	
+   <delete id="deleteClassType">
+           delete from classtype where id = #{id};
+   </delete>
+</mapper>
