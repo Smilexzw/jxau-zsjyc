@@ -5,6 +5,7 @@ import cn.jxau.zsjyc.mapper.ClassTypeMapper;
 import cn.jxau.zsjyc.pojo.Articles;
 import cn.jxau.zsjyc.pojo.ClassType;
 import cn.jxau.zsjyc.service.ClassTypeService;
+import cn.jxau.zsjyc.service.TopbarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +25,9 @@ public class MainController {
 	@Autowired
 	private ClassTypeService classTypeService;
 
+	@Autowired
+	TopbarService topbarService;
+
 
 	@GetMapping("/{page}")
 	public String showPage(@PathVariable String page) {
@@ -39,11 +43,12 @@ public class MainController {
 			model.addAttribute("bk" + classtype.getId() + "name", classtype.getClassname());
 			List<Articles> articlesList=this.articlesService.findArticlesByClassId(classtype.getId());
 			if (classtype.getId()==7){
-				Collections.reverse(articlesList);
+				continue;
 			}
 			model.addAttribute("bk" + classtype.getId(),articlesList );
 		}
+		model.addAttribute("level1", topbarService.getFirstLevels());
+		model.addAttribute("level2", topbarService.getSecondlevels());
         return "index";
     }
-
 }
